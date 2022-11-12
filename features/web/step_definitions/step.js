@@ -17,7 +17,7 @@ When('I click sign in', async function() {
 });
 
 When('I click on option Posts', async function() {
-    let element = await this.driver.$('#ember22');
+    let element = await this.driver.$('ul.gh-nav-list.gh-nav-manage > li:first-child');
     return await element.click();
 });
 
@@ -110,6 +110,63 @@ When('I select {kraken-string} days after', async function (days) {
     let element = await this.driver.$('div .ember-power-calendar > div:first-child > div:first-child > input');
     return await element.setValue(date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate());
 });
+
+When('I click on Drafts', async function () {
+    let elements = await this.driver.$$('ul.gh-nav-view-list > li:first-child > a');
+    return await elements[0].click();
+});
+
+When('I click on first draft', async function () {
+    let elements = await this.driver.$$('.gh-post-list-button a.gh-post-list-cta');
+    return await elements[0].click();
+});
+
+When('I click on menu info', async function () {
+    let elements = await this.driver.$$('button.gh-btn-editor');
+    return await elements[2].click();
+});
+
+When('I click on delete button', async function () {
+    let element = await this.driver.$('button.gh-btn.gh-btn-hover-red.gh-btn-icon.settings-menu-delete-button');
+    return await element.click();
+});
+
+When('I click on modal delete button', async function () {
+    let element = await this.driver.$('.modal-footer .gh-btn:not(:first-child)');
+    return await element.click();
+});
+
+Then('The result should not be {kraken-string}', async function (expectedTitle) {
+    let elements = await this.driver.$$('.gh-posts-list-item-labs .gh-content-entry-title');
+    return Promise.all(
+        elements.map(async(element) => {
+            return await element.getText();
+        })
+    ).then(async(texts) => { 
+        let findedText = texts.find(text => text === expectedTitle);
+        return await expect(findedText).to.be.an('undefined');
+    });
+});
+
+When('I click on Published', async function () {
+    let elements = await this.driver.$$('ul.gh-nav-view-list > li:nth-child(3) > a');
+    return await elements[0].click();
+});
+
+When('I click on first published', async function () {
+    let elements = await this.driver.$$('.gh-post-list-button a.gh-post-list-cta');
+    return await elements[0].click();
+});
+
+Then('Should be 0 conversions', async function () {
+    let element = await this.driver.$('.gh-tabs-analytics .tab-list h3');
+    return expect(await element.getText()).to.eql('0');
+});
+
+
+
+
+
 
 
 
