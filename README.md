@@ -38,14 +38,13 @@ Para más detalle ver el siguiente gif:
 
 Pasos para el lanzamiento de las pruebas:
 
-Cuando el usuario se encuentre creado, se proceden a lanzar los casos de prueba ejecutando el comando desde la raiz de este proyecto usando la consola
-de comandos gitBash preferiblemente, para ello se debe:
+Cuando el usuario se encuentre creado, se proceden a lanzar los casos de prueba ejecutando el comando desde la raiz de este proyecto usando una consola de comandos preferiblemente, para ello se debe:
 
 Clonar este repositorio desde la opción de git ejecutando:
 
 git clone https://github.com/dhenaotoro/automatizacion-semana5-kraken.git
 
-Posteriormente, se debe asegurar que:
+Posteriormente, se debe asegurar antes de que:
 
 1) Si es windows, tener instalado android studio y definir las siguientes rutas en la variable de ambiente principal path del sistema de windows:
 
@@ -54,15 +53,17 @@ C:\Users\daniel.henao\AppData\Roaming\npm
 C:\Program Files\Android\Android Studio
 C:\Users\daniel.henao\AppData\Local\Android\Sdk\platform-tools
 
-2) Tener la versión de node js 16.13.0 ya instalada
+2) Tener instalada la versión de node js 16.13.0 ya instalada
 
-3) Instalar globalmente kraken en la maquina ejecutado: npm install kraken-node -g
+3) Tener instalado globalmente kraken en la maquina, en caso de que no, entonces ejecutar: npm install kraken-node -g
 
-4) Instalar también localmente kraken en la maquina ejecutado: npm install kraken-node
+4) Tener instalado localmente kraken en la maquina, en caso de que no, entonces ejecutar: npm install kraken-node
 
-5) Instalar también la librería appium a nivel global ejecutando: npm install -g appium
+5) Tener instalada la librería appium a nivel global, en caso de que no, entonces ejecutar: npm install -g appium
 
-Finalmente, se debe ejecutar el comando:
+Cuando todo lo anterior esté asegurado. Se requiere ejecutar: npm install
+
+Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el siguiente comando, con uso de gitbash (Si es windows):
 
 .\node_modules\kraken-node\bin\kraken-node run
 
