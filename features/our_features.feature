@@ -130,7 +130,7 @@ Scenario: Do a login and public a draft post and delete it over draft post list
   And I click on delete button
   And I wait for 3 seconds
   And I click on modal delete button
-  And I wait for 1 seconds
+  And I wait for 10 seconds
   Then The result should not be "Draft post Test 1 to delete"
   And I wait for 2 seconds
 

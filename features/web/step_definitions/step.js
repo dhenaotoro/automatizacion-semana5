@@ -17,7 +17,7 @@ When('I click sign in', async function() {
 });
 
 When('I click on option Posts', async function() {
-    let element = await this.driver.$('ul.gh-nav-list.gh-nav-manage > li:first-child');
+    let element = await this.driver.$('#ember22');
     return await element.click();
 });
 
