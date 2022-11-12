@@ -31,6 +31,7 @@ Ahora, debes tener en cuenta que los datos de "Email address" y "Password", debe
 
 Para más detalle ver el siguiente gif:
 
+![Evidence_Start_Test_With_Kraken](https://user-images.githubusercontent.com/78186561/201480561-5988d7d7-4b10-420a-ae27-5b56845b7688.gif)
 
 Pasos para el lanzamiento de las pruebas:
 
