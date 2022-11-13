@@ -42,16 +42,16 @@ Cuando el usuario se encuentre creado, se proceden a lanzar los casos de prueba 
 
 Clonar este repositorio desde la opción de git ejecutando:
 
-git clone https://github.com/dhenaotoro/automatizacion-semana5-kraken.git
+`git clone https://github.com/dhenaotoro/automatizacion-semana5-kraken.git`
 
 Posteriormente, se debe asegurar antes de que:
 
 1) Si es windows, tener instalado android studio y definir las siguientes rutas en la variable de ambiente principal path del sistema de windows:
 
-C:\Program Files\nodejs
-C:\Users\daniel.henao\AppData\Roaming\npm
-C:\Program Files\Android\Android Studio
-C:\Users\daniel.henao\AppData\Local\Android\Sdk\platform-tools
+- C:\Program Files\nodejs
+- C:\Users\daniel.henao\AppData\Roaming\npm
+- C:\Program Files\Android\Android Studio
+- C:\Users\daniel.henao\AppData\Local\Android\Sdk\platform-tools
 
 2) Tener instalada la versión de node js 16.13.0 ya instalada
 
@@ -65,6 +65,6 @@ Cuando todo lo anterior esté asegurado. Se requiere ejecutar: npm install
 
 Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el siguiente comando, con uso de gitbash (Si es windows):
 
-.\node_modules\kraken-node\bin\kraken-node run
+`.\node_modules\kraken-node\bin\kraken-node run`
 
 Abrir el archivo index.html de la ultima carpeta de reportes generada en reports. Allí se verán los resultados de la ejecución de forma estadística.
