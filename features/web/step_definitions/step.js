@@ -2,17 +2,17 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('chai');
 
 When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#ember6');
+    let element = await this.driver.$('input[type="email"]');
     return await element.setValue(email);
 });
 
 When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#ember8');
+    let element = await this.driver.$('input[type="password"]');
     return await element.setValue(password);
 });
 
 When('I click login', async function() {
-    let element = await this.driver.$('button[tabindex="3"]');
+    let element = await this.driver.$('#ember7');
     return await element.click();
 });
 
@@ -67,7 +67,7 @@ When('I go back to pages', async function () {
 });
 
 Then('The most recent page title should be {kraken-string}', async function (expectedTitle) {
-    let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('h3').getText();
+    let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  feature-memberAttribution"]').$$('li')[0].$('a').$('h3').getText();
     return await expect(expectedTitle).to.eql(textFirstPage);
 });
 
@@ -283,4 +283,97 @@ When('I click on first published', async function () {
 Then('Should be 0 conversions', async function () {
     let element = await this.driver.$('.gh-tabs-analytics .tab-list h3');
     return expect(await element.getText()).to.eql('0');
+});
+
+// STEPS TAGS
+
+When('I click on option Tags', async function() {
+    let element = await this.driver.$('a[href="#/tags/"');
+    return await element.click();
+});
+
+When('I click on New tag', async function() {
+    let element = await this.driver.$('a[href="#/tags/new/"');
+    return await element.click();
+});
+
+When('I type a tag title as {string}', async function (title){
+    let element = await this.driver.$('input[id="tag-name"]');
+    return await element.setValue(title)
+});
+
+When('I type a tag slug as {string}', async function (slug){
+    let element = await this.driver.$('input[id="tag-slug"]');
+    return await element.setValue(slug)
+});
+
+When('I type a tag description as {string}', async function (description){
+    let element = await this.driver.$('textarea[id="tag-description"]');
+    return await element.setValue(description)
+});
+
+When('I type a tag color as {string}', async function (color){
+    let element = await this.driver.$('input[name="accent-color"]');
+    return await element.setValue(color)
+});
+
+When('I click on expand buttons', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-expand"');
+    return await element.click();
+});
+
+When('I type a tag meta title as {string}', async function (title){
+    let element = await this.driver.$('input[id="meta-title"]');
+    return await element.setValue(title)
+});
+
+When('I type a tag meta description as {string}', async function (description){
+    let element = await this.driver.$('textarea[id="meta-description"]');
+    return await element.setValue(description)
+});
+
+When('I type a tag meta url as {string}', async function (url){
+    let element = await this.driver.$('input[id="canonical-url"]');
+    return await element.setValue(url)
+});
+
+When('I click on save tag', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]');
+    return await element.click();
+});
+
+Then('The most recent tag title should be {string}', async function (expectedTitle) {
+    let textFirstPage = await this.driver.$('ol[class="tags-list gh-list "]').$$('li[class="gh-list-row gh-tags-list-item"]')[0].$('a').$('h3[class="gh-tag-list-name"]').getText();
+    return await expect(expectedTitle).to.eql(textFirstPage);
+});
+
+When('I click in first tag list', async function() {
+    let element = await this.driver.$('a[href="#/tags/tag-test-1/"]');
+    return await element.click();
+});
+
+When('I click in delete tag', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon"]');
+    return await element.click();
+});
+
+When('I click in confirm modal', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
+    return await element.click();
+});
+
+Then('Return the tags list', async function () {    
+    let textFirstPage = await this.driver.$('div[class="gh-canvas-header sticky"]').$('header[class="gh-canvas-header-content"]').$('h2').getText();
+    return await expect("Tags").to.eql(textFirstPage);
+});
+
+When('I click in reject modal', async function() {
+    let element = await this.driver.$('button[class="gh-btn"]');
+    return await element.click();
+});
+
+Then('I expect to see error {string}', error => async function()  {
+    $('div=You must specify a name for the tag.').waitForDisplayed(5000);
+    var alertText = await this.driver.$('span[class="error"]').$('p[class="response"]').getText();
+    return await expect(alertText).to.include(error);
 });
