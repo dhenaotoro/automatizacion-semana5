@@ -2,14 +2,136 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('chai');
 
 When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#identification');
+    let element = await this.driver.$('#ember6');
     return await element.setValue(email);
 });
 
 When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#password');
+    let element = await this.driver.$('#ember8');
     return await element.setValue(password);
 });
+
+When('I click login', async function() {
+    let element = await this.driver.$('button[tabindex="3"]');
+    return await element.click();
+});
+
+When('I click pages', async function() {
+    let element = await this.driver.$('a[href="#/pages/"]');
+    return await element.click();
+});
+
+When('I click newPage', async function() {
+    let element = await this.driver.$('a[href="#/editor/page/"]');
+    return await element.click();
+});
+
+When('I enter pageTitle {kraken-string}', async function (title) {
+    let element = await this.driver.$('textarea[placeholder="Page title"]');
+    return await element.setValue(title);
+});
+
+When('I click on page content', async function() {
+    let element = await this.driver.$('div.koenig-editor__editor.__mobiledoc-editor');
+    return await element.click();
+});
+
+When('I type a page content as {kraken-string}', async function (pageContent) {
+    let element = await this.driver.$('div.koenig-editor__editor.__mobiledoc-editor > p');
+    return await element.setValue(pageContent);
+});
+
+When('I click on publish button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-editor darkgrey gh-publish-trigger"]');
+    return await element.click();
+});
+
+When('I click on continue button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-black gh-btn-large"]');
+    return await element.click();
+});
+
+When('I click on publish right now button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-large gh-btn-pulse ember-view"]');
+    return await element.click();
+});
+
+When('I click on back to page editor', async function () {
+    let element = await this.driver.$('button[class="gh-back-to-editor"]');
+    return await element.click();
+});
+
+When('I go back to pages', async function () {
+    let element = await this.driver.$('a[href="#/pages/"]');
+    return await element.click();
+});
+
+Then('The most recent page title should be {kraken-string}', async function (expectedTitle) {
+    let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('h3').getText();
+    return await expect(expectedTitle).to.eql(textFirstPage);
+});
+
+Then('The most recent page title should not be {kraken-string}', async function (expectedTitle) {
+    let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('h3').getText();
+    return await expect(expectedTitle).not.to.eql(textFirstPage);
+});
+
+Then('I click firt page to edit', async function () {
+    let firstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0];
+    return await firstPage.click();
+});
+
+When('I click on update button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-editor gh-editor-save-trigger green ember-view"]');
+    return await element.click();
+});
+
+When('I click on unpublish button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-editor darkgrey gh-unpublish-trigger"]');
+    return await element.click();
+});
+
+When('I click on unpublish confirmation button', async function () {
+    let element = await this.driver.$('button[class="gh-revert-to-draft"]');
+    return await element.click();
+});
+
+When('I click on page setting button', async function () {
+    let element = await this.driver.$('button[class="settings-menu-toggle gh-btn gh-btn-editor gh-btn-icon icon-only gh-btn-action-icon"]');
+    return await element.click();
+});
+
+When('I click on delete page button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]');
+    return await element.click();
+});
+
+When('I click on confirmation delete page button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
+    return await element.click();
+});
+
+Then('The most recent page status should be {kraken-string}', async function (expectedTitle) {
+    let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('p[class="gh-content-entry-status"]').$('span').getText();
+    return await expect(expectedTitle).to.eql(textFirstPage);
+});
+
+When('I click on select publish page mode button', async function () {
+    let element = await this.driver.$('button[class="gh-publish-setting-title "]');
+    return await element.click();
+});
+
+When('I select schedule for late option', async function () {
+    let element = await this.driver.$('fieldset').$('div[class="gh-publish-schedule"]').$$('div')[2];
+    return await element.click();
+});
+
+When('I click on go back to editor', async function () {
+    let element = await this.driver.$('button[class="gh-btn-editor gh-publish-back-button"]');
+    return await element.click();
+});
+
+
 
 When('I click sign in', async function() {
     let element = await this.driver.$('#ember7');
@@ -17,7 +139,7 @@ When('I click sign in', async function() {
 });
 
 When('I click on option Posts', async function() {
-    let element = await this.driver.$('#ember22');
+    let element = await this.driver.$('ul.gh-nav-list.gh-nav-manage > li:first-child');
     return await element.click();
 });
 
@@ -162,12 +284,3 @@ Then('Should be 0 conversions', async function () {
     let element = await this.driver.$('.gh-tabs-analytics .tab-list h3');
     return expect(await element.getText()).to.eql('0');
 });
-
-
-
-
-
-
-
-
-

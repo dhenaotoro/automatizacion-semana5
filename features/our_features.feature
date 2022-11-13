@@ -2,7 +2,7 @@ Feature: Post functionality
 
 @user1 @web
 Scenario: Do a login and public a post and see it on the post list
-  Given I navigate to page "http://localhost:3002/ghost/#/signin"
+  Given I navigate to page "<URL>"
   And I wait for 5 seconds
   When I enter email "<USERNAME1>"
   And I wait for 2 seconds
