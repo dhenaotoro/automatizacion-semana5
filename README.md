@@ -68,3 +68,22 @@ Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el si
 `.\node_modules\kraken-node\bin\kraken-node run`
 
 Abrir el archivo index.html de la ultima carpeta de reportes generada en reports. Allí se verán los resultados de la ejecución de forma estadística.
+
+<H2><b>Ejecución pruebas de tags:</b></H2>
+Para las pruebas que corresponden a tags se realizó lo siguiente:
+<ul>
+ <li> Clonar el repositorio. </li>
+ <li> Instalar las librerías de node js </li>
+ <li> Creación de nuevo feature tag.feature </li>
+ <li> Creación de los 5 escenarios como: 
+      <ul><li> Login y creación de un tag y posteriormente sea visible dentro del listado de tags </li>
+          <li> Login y edición del tag recién creado editando el titulo y el color, posteriormente se regresa al listado de tags y se valida que el nombre cambio </li>
+          <li> Login y tratar de eliminar el tag creado dando en el modal el rechazo de esta acción, posteriormente se regresa al listado de tags </li>
+          <li> Login y creación de un tag sin nombre dando como resultado un mensaje de error como el siguiente "You must specify a name for the tag". </li>
+          <li> Login y eliminación del tag aceptando la confirmación del modal, posteriormente se regresa al listado de tags </li>
+      </ul>
+  </li>
+ </ul>
+ <h4><b> Es importante resaltar que para el flujo de las pruebas E2E se manejan 5 usuarios diferentes lo cual con la función wait se espera a que el primer usuario termine la acción para que el siguiente usuario empiece con el escenario es decir: Usuario 2 espera a que finalice el Usuario 1, El usuario 3 espera a que finalice el usuario 2 y así sucesivamente hasta llegar al último usuario. <b></h4>
+
+  
