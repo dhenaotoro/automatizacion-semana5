@@ -4,9 +4,7 @@ Feature: Page functionality
 Scenario: Schedule new page
   Given I navigate to page "<URL>"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
-  And I enter password "<PASSWORD1>"
-  And I click login
+  When I signin into ghost admin
   And I wait for 2 seconds
   And I click pages
   And I wait for 2 seconds
@@ -26,7 +24,7 @@ Scenario: Schedule new page
   And I wait for 2 seconds
   And I click on publish right now button
   And I wait for 2 seconds
-  And I click on go back to editor
+  And I click on go back to page editor
   And I wait for 2 seconds
   And I go back to pages
   And I wait for 2 seconds

@@ -4,9 +4,7 @@ Feature: Page functionality
 Scenario: Unpublish first page
   Given I navigate to page "<URL>"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
-  And I enter password "<PASSWORD1>"
-  And I click login
+  When I signin into ghost admin
   And I wait for 2 seconds
   And I click pages
   And I wait for 2 seconds
