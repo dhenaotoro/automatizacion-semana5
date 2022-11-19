@@ -3,13 +3,8 @@ Feature: Tags functionality
 @user1 @web
 Scenario: Do a login and create a tag and see it on the tag list
   Given I navigate to page "<URL>"
-  And I wait for 2 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 1 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
-  And I wait for 5 seconds
+  And I wait for 3 seconds
+  When I signin into ghost admin  
   And I click on option Tags
   And I wait for 1 seconds
   And I click on New tag
@@ -37,12 +32,8 @@ Scenario: Do a login and create a tag and see it on the tag list
 Scenario: Edit title and color tag
   Given I navigate to page "<URL>"
   And I wait for 19 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 1 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
-  And I wait for 3 seconds
+  When I signin into ghost admin   
+  And I wait for 3 seconds   
   And I click on option Tags
   And I wait for 1 seconds
   And I click in first tag list
@@ -60,11 +51,7 @@ Scenario: Edit title and color tag
 Scenario: Reject Delete
   Given I navigate to page "<URL>"
   And I wait for 28 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 1 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
+  When I signin into ghost admin  
   And I wait for 3 seconds
   And I click on option Tags
   And I wait for 1 seconds
@@ -76,18 +63,14 @@ Scenario: Reject Delete
   And I wait for 1 seconds  
   And I click on option Tags
   And I wait for 1 seconds  
-  Then return the tags list
+  Then Return the tags list
 
 
 @user4 @web
 Scenario: Do a login and create a tag and see it on the tag list
   Given I navigate to page "<URL>"
   And I wait for 39 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 1 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
+  When I signin into ghost admin
   And I wait for 3 seconds
   And I click on option Tags
   And I wait for 1 seconds
@@ -95,18 +78,14 @@ Scenario: Do a login and create a tag and see it on the tag list
   And I wait for 1 seconds  
   And I click on save tag
   And I wait for 1 seconds
-  Then I expect to see error "You must specify a name for the tag"
+  Then I expect to see error "You must specify a name for the tag."
 
 
 @user5 @web
 Scenario: Delete tag
   Given I navigate to page "<URL>"
   And I wait for 50 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 1 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 1 seconds
-  And I click sign in
+  When I signin into ghost admin
   And I wait for 3 seconds
   And I click on option Tags
   And I wait for 1 seconds
