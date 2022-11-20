@@ -10,11 +10,13 @@ Scenario: Unpublish first page
   And I wait for 2 seconds
   And I click firt page to edit
   And I wait for 2 seconds
+  And I click on update button
+  And I wait for 2 seconds
   And I click on unpublish button
   And I wait for 2 seconds
-  And I click on unpublish confirmation button
+  And I click on confirm update button
   And I wait for 2 seconds
   And I go back to pages
   And I wait for 2 seconds
   Then The most recent page title should be "Kraken Test Page edited"
-  And The most recent page status should be "Draft"
+  And The most recent page status should be "DRAFT"

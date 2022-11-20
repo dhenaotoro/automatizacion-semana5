@@ -17,10 +17,10 @@ Scenario: Create new page
   And I wait for 2 seconds
   And I click on continue button
   And I wait for 2 seconds
-  And I click on publish right now button
-  And I wait for 2 seconds
-  And I click on back to page editor
-  And I wait for 2 seconds
+  # And I click on publish right now button
+  # And I wait for 2 seconds
+  # And I click on back to page editor
+  # And I wait for 2 seconds
   And I go back to pages
   And I wait for 2 seconds
   Then The most recent page title should be "Kraken Test Page"

@@ -42,6 +42,8 @@ Then('I click firt page to edit', pagesPage.ClickFirstPageToEdit);
 
 When('I click on update button', pagesPage.ClickOnUpdatePageButton);
 
+When('I click on confirm update button', pagesPage.ClickOnUpdateConfirmButton);
+
 When('I click on unpublish button', pagesPage.ClickOnUnpublishPageButton);
 
 When('I click on unpublish confirmation button', pagesPage.ClickOnUnpublishPageConfirmationButton);

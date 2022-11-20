@@ -17,9 +17,9 @@ Scenario: Schedule new page
   And I wait for 2 seconds
   And I click on select publish page mode button
   And I wait for 2 seconds
-  And I select schedule for late option
-  And I wait for 2 seconds
-  And I select "2" days after
+  # And I select schedule for late option
+  # And I wait for 2 seconds
+  # And I select "2" days after
   And I click on continue button
   And I wait for 2 seconds
   And I click on publish right now button
