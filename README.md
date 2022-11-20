@@ -68,6 +68,9 @@ Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el si
 `.\node_modules\kraken-node\bin\kraken-node run`
 
 Abrir el archivo index.html de la ultima carpeta de reportes generada en reports. Allí se verán los resultados de la ejecución de forma estadística.
+
+ <h4><b>Nota: Es importante resaltar que para el flujo de las pruebas E2E se realizo de forma secuencial así se que se recomienda ir apgando feauture y ejecutando cada escenario independiente para apagar las pruebas se realizo la estrategia de cambiar la extension de cada archivo es decir de .feature se paso a .txt dejando solo el feature del escenacio que se quiere probar. <b></h4>
+ 
 <H2><b>Ejecución pruebas de page:</b></H2>
 Para la ejecucion de las pruebas correspondientes a pages se debe:
 <ul>
@@ -81,6 +84,18 @@ Para la ejecucion de las pruebas correspondientes a pages se debe:
      <li> Marcar en Scheadule la pagina </li> 
  </ul>
  
+ <H2><b>Ejecución pruebas de post:</b></H2>
+Para la ejecucion de las pruebas correspondientes a pages se debe:
+<ul>
+<li> Tener clonado el repositorio </li>
+<li> Tener instalado previamente las librerias de Node Js </li>
+<li> Ejecucion secuencial de los siguientes features se recomiendo apagar (Cambian la extensión de las otras pruebas a .txt) las demas pruebas mientras se va probando cada escenario  </li>
+ <ul><li> Crear un nuevo post</li>
+     <li> Marcar como Scheadule el post</li>
+     <li> Marcar como draft el post </li>
+     <li> Marcar como draft el post y borrarlo </liZ
+     <li> Marcar como publis el nuevo post </li> 
+ </ul>
 
 <H2><b>Ejecución pruebas de tags:</b></H2>
 Para las pruebas que corresponden a tags se realizó lo siguiente:
@@ -97,6 +112,6 @@ Para las pruebas que corresponden a tags se realizó lo siguiente:
       </ul>
   </li>
  </ul>
- <h4><b> Es importante resaltar que para el flujo de las pruebas E2E se manejan 5 usuarios diferentes lo cual con la función wait se espera a que el primer usuario termine la acción para que el siguiente usuario empiece con el escenario es decir: Usuario 2 espera a que finalice el Usuario 1, El usuario 3 espera a que finalice el usuario 2 y así sucesivamente hasta llegar al último usuario. <b></h4>
+
 
   
