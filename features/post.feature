@@ -4,12 +4,8 @@ Feature: Post functionality
 Scenario: Do a login and public a post and see it on the post list
   Given I navigate to page "<URL>"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
+  When I signin into ghost admin
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
-  And I click sign in
-  And I wait for 10 seconds
   And I click on option Posts
   And I wait for 2 seconds
   And I click on New post
@@ -37,12 +33,8 @@ Scenario: Do a login and public a post and see it on the post list
 Scenario: Do a login and schedule a post and see it on the post list
   Given I navigate to page "http://localhost:3002/ghost/#/signin"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
+  When I signin into ghost admin
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
-  And I click sign in
-  And I wait for 10 seconds
   And I click on option Posts
   And I wait for 2 seconds
   And I click on New post
@@ -78,12 +70,8 @@ Scenario: Do a login and schedule a post and see it on the post list
 Scenario: Do a login and get a draft post and see it on the post list
 Given I navigate to page "http://localhost:3002/ghost/#/signin"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
+  When I signin into ghost admin
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
-  And I click sign in
-  And I wait for 10 seconds
   And I click on option Posts
   And I wait for 2 seconds
   And I click on New post
@@ -103,12 +91,8 @@ Given I navigate to page "http://localhost:3002/ghost/#/signin"
 Scenario: Do a login and public a draft post and delete it over draft post list
   Given I navigate to page "http://localhost:3002/ghost/#/signin"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
+  When I signin into ghost admin
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
-  And I click sign in
-  And I wait for 10 seconds
   And I click on option Posts
   And I wait for 2 seconds
   And I click on New post
@@ -137,12 +121,8 @@ Scenario: Do a login and public a draft post and delete it over draft post list
 @user5 @web
 Scenario: Do a login and public a post and see 0 conversions over analytics section
   Given I navigate to page "http://localhost:3002/ghost/#/signin"
-  When I enter email "<USERNAME1>"
+  When I signin into ghost admin
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
-  And I click sign in
-  And I wait for 10 seconds
   And I click on option Posts
   And I wait for 2 seconds
   And I click on New post
