@@ -55,17 +55,17 @@ module.exports = class PagesPage {
 	}
 
 	async ValidateRecentPageMustToHaveTheTitle(expectedTitle) {
-		let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('h3').getText();
+		let textFirstPage = await this.driver.$('ol.pages-list.gh-list').$$('li')[0].$('a').$('h3').getText();
     	return expect(expectedTitle).to.eql(textFirstPage);
 	}
 
 	async ValidateRecentPageMustNotToHaveTheTitle(expectedTitle) {
-		let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('h3').getText();
+		let textFirstPage = await this.driver.$('ol.pages-list.gh-list').$$('li')[0].$('a').$('h3').getText();
     	return expect(expectedTitle).not.to.eql(textFirstPage);
 	}
 
 	async ClickFirstPageToEdit() {
-		let firstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0];
+		let firstPage = await this.driver.$('ol.pages-list.gh-list').$$('li')[0];
     	return await firstPage.click();
 	}
 
@@ -100,7 +100,7 @@ module.exports = class PagesPage {
 	}
 
 	async ValidateRecentStatusPageMustBe(expectedStatus) {
-		let textFirstPage = await this.driver.$('ol[class="pages-list gh-list  "]').$$('li')[0].$('a').$('p[class="gh-content-entry-status"]').$('span').getText();
+		let textFirstPage = await this.driver.$('ol.pages-list.gh-list').$$('li')[0].$('a').$('p[class="gh-content-entry-status"]').$('span').getText();
     	return expect(expectedStatus).to.eql(textFirstPage);
 	}
 
