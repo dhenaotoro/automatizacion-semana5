@@ -68,6 +68,19 @@ Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el si
 `.\node_modules\kraken-node\bin\kraken-node run`
 
 Abrir el archivo index.html de la ultima carpeta de reportes generada en reports. Allí se verán los resultados de la ejecución de forma estadística.
+<H2><b>Ejecución pruebas de page:</b></H2>
+Para la ejecucion de las pruebas correspondientes a pages se debe:
+<ul>
+<li> Tener clonado el repositorio </li>
+<li> Tener instalado previamente las librerias de Node Js </li>
+<li> Ejecucion secuencial de los siguientes features se recomiendo apagar (Cambian la extensión de las otras pruebas a .txt) las demas pruebas mientras se va probando cada escenario  </li>
+ <ul><li> Crear una nueva pagina</li>
+     <li> Editar una pagina </li>
+     <li> Marcar en UnPublish la nueva pagina </li>
+     <li> Borrar pagina </liZ
+     <li> Marcar en Scheadule la pagina </li> 
+ </ul>
+ 
 
 <H2><b>Ejecución pruebas de tags:</b></H2>
 Para las pruebas que corresponden a tags se realizó lo siguiente:
