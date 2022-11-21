@@ -138,4 +138,8 @@ Para ejecutar las funciones y escenarios en la versión 3.42 se debe:
  
  Ventajas y desventajas en la wiki del proyecto  https://github.com/dhenaotoro/automatizacion-semana5-kraken/wiki
  
+ <h1>Pruebas de regresión Backstop</h1>
+ 
+ Para las pruebas de regresión se debe clonar el siguiente repo  https://github.com/accardenasc1/backstop_ghost_semana_6 y seguir las instrucciones allí descritas
+ 
   
