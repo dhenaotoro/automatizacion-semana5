@@ -136,5 +136,6 @@ Para ejecutar las funciones y escenarios en la versión 3.42 se debe:
  
  Para tomar los screenshots de cada escenario dentro de la herramienta de kraken se utilizó el generador de resultados que kraken nos facilita, dentro de cada ejecución del comando <i>"./node_modules/kraken-node/bin/kraken-node run en un gitBash"</i> se genera un reporte dentro de la carpeta <i>"reports"</i> de tal forma se copiaban las imágenes generadas y se almacenaban de forma organizada en la carpeta <i> Screenshots_V3.42</i>. Las funciones y escenarios son los mismos descritos anteriormente.
  
- Ventajas y desventajas en la wiki del proyecto 
+ Ventajas y desventajas en la wiki del proyecto  https://github.com/dhenaotoro/automatizacion-semana5-kraken/wiki
+ 
   
