@@ -142,4 +142,7 @@ Para ejecutar las funciones y escenarios en la versión 3.42 se debe:
  
  Para las pruebas de regresión se debe clonar el siguiente repo  https://github.com/accardenasc1/backstop_ghost_semana_6 y seguir las instrucciones allí descritas
  
+ <h1>Video explicativo Semana 6</h1>
+ 
+ https://uniandes-my.sharepoint.com/:v:/g/personal/ac_cardenasc1_uniandes_edu_co/EZPR_VMoOktGt-0AlZPAQOcBWbhKmcn7Q1DTV0Jpi3HFEA?e=res7kj
   
