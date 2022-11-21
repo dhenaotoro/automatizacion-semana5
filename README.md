@@ -135,4 +135,6 @@ Para ejecutar las funciones y escenarios en la versión 3.42 se debe:
 <h4><b>Nota: Es importante resaltar que para el flujo de las pruebas E2E se realizó de forma secuencial así se que se recomienda ir apagando feauture y ejecutando cada escenario independiente para apagar las pruebas se realizo la estrategia de cambiar la extensión de cada archivo es decir de .feature se paso a .txt dejando solo el feature del escenario que se quiere probar. <b></h4>
  
  Para tomar los screenshots de cada escenario dentro de la herramienta de kraken se utilizó el generador de resultados que kraken nos facilita, dentro de cada ejecución del comando <i>"./node_modules/kraken-node/bin/kraken-node run en un gitBash"</i> se genera un reporte dentro de la carpeta <i>"reports"</i> de tal forma se copiaban las imágenes generadas y se almacenaban de forma organizada en la carpeta <i> Screenshots_V3.42</i>. Las funciones y escenarios son los mismos descritos anteriormente.
+ 
+ Ventajas y desventajas en la wiki del proyecto 
   
