@@ -69,8 +69,15 @@ Y de esta forma es posible lanzar las pruebas, por tanto, se debe ejecutar el si
 
 Abrir el archivo index.html de la ultima carpeta de reportes generada en reports. Allí se verán los resultados de la ejecución de forma estadística.
 
- <h4><b>Nota: Es importante resaltar que para el flujo de las pruebas E2E se realizo de forma secuencial así se que se recomienda ir apgando feauture y ejecutando cada escenario independiente para apagar las pruebas se realizo la estrategia de cambiar la extension de cada archivo es decir de .feature se paso a .txt dejando solo el feature del escenacio que se quiere probar. <b></h4>
+<h4><b>Nota: Es importante resaltar que para el flujo de las pruebas E2E se realizó de forma secuencial así se que se recomienda ir apagando feauture y ejecutando cada escenario independiente para apagar las pruebas se realizo la estrategia de cambiar la extensión de cada archivo es decir de .feature se paso a .txt dejando solo el feature del escenario que se quiere probar. <b></h4>
  
+
+<h1>Pruebas E2E GhostV5.22</h1>
+ Para ejecutar los escenarios y teniendo clonado el repositorio se debe revisar el ambiente local este ubicado sobre la rama <i>"Main"</i> de no ser así se debe ejecutar el siguiente comando <i>"git checkout main"</i> allí se encontrará los escenarios respectivos y los screenshots de cada escenario ejecutado. 
+ 
+ Para tomar los screenshots de cada escenario dentro de la herramienta de kraken se utilizó el generador de resultados que kraken nos facilita, dentro de cada ejecución del comando <i>"./node_modules/kraken-node/bin/kraken-node run en un gitBash"</i> se genera un reporte dentro de la carpeta <i>"reports"</i> de tal forma se copiaban las imágenes generadas y se almacenaban de forma organizada en la carpeta <i> Screenshots </i>. Las funciones y escenarios fueron las siguientes:
+
+
 <H2><b>Ejecución pruebas de page:</b></H2>
 Para la ejecucion de las pruebas correspondientes a pages se debe:
 <ul>
@@ -83,8 +90,8 @@ Para la ejecucion de las pruebas correspondientes a pages se debe:
      <li> Borrar pagina </liZ
      <li> Marcar en Scheadule la pagina </li> 
  </ul>
- 
- <H2><b>Ejecución pruebas de post:</b></H2>
+ </ul>
+<H2><b>Ejecución pruebas de post:</b></H2>
 Para la ejecucion de las pruebas correspondientes a pages se debe:
 <ul>
 <li> Tener clonado el repositorio </li>
@@ -95,6 +102,7 @@ Para la ejecucion de las pruebas correspondientes a pages se debe:
      <li> Marcar como draft el post </li>
      <li> Marcar como draft el post y borrarlo </liZ
      <li> Marcar como publis el nuevo post </li> 
+ </ul>
  </ul>
 
 <H2><b>Ejecución pruebas de tags:</b></H2>
@@ -113,5 +121,18 @@ Para las pruebas que corresponden a tags se realizó lo siguiente:
   </li>
  </ul>
 
-
+<h1>Pruebas E2E GhostV3.42</h1>
+Para ejecutar las funciones y escenarios en la versión 3.42 se debe:
+<ul>
+ <li> Instalar de forma local ghost para ello se ubica la carpeta donde se realizará la instalación y ejecutamos <i> ghost install 3.42 local </i>
+ <li> Ejecutar el comando <i>npm install sqlite3 --save</i> para isntalar el motor de base de datos Sqllite3. </li>
+ <li> Ubicarse en la rama <i>main_Ghost_3.42</i> para ello se debe realizar el comando <i>Git checkout main_Ghost_3.42</i>
+ <li> Cambiar las credenciales y URL segpun corresponda a la instalación para ello se debe modificar el archivo <i> Properties.json</i>
+ </ul>
+ 
+ al igual que la versión 5.22 se recomienda la siguiente nota:
+ 
+<h4><b>Nota: Es importante resaltar que para el flujo de las pruebas E2E se realizó de forma secuencial así se que se recomienda ir apagando feauture y ejecutando cada escenario independiente para apagar las pruebas se realizo la estrategia de cambiar la extensión de cada archivo es decir de .feature se paso a .txt dejando solo el feature del escenario que se quiere probar. <b></h4>
+ 
+ Para tomar los screenshots de cada escenario dentro de la herramienta de kraken se utilizó el generador de resultados que kraken nos facilita, dentro de cada ejecución del comando <i>"./node_modules/kraken-node/bin/kraken-node run en un gitBash"</i> se genera un reporte dentro de la carpeta <i>"reports"</i> de tal forma se copiaban las imágenes generadas y se almacenaban de forma organizada en la carpeta <i> Screenshots_V3.42</i>. Las funciones y escenarios son los mismos descritos anteriormente.
   
